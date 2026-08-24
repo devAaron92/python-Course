@@ -1,16 +1,14 @@
-#Please write a program which asks the user for two strings and then prints out whichever is the longer of the two - that is, whichever has the more characters. 
-#If the strings are of equal length, the program should print out "The strings are equally long".
-#Some examples of expected behaviour:
+#Please write a program which asks the user for a string. 
+#The program then prints out a message based on whether the second character and the second to last character are the same or not. 
+#See the examples below.
 
-stringy1 = input("Please Enter a string")
 
-stringy2 = input("Please enter a second string")
+stringy = input("please enter a string: ")
 
-if len(stringy1) == len(stringy2):
-    print("The strings are equal")
+secondToLast = len(stringy) -2 
 
-elif len(stringy1) > len(stringy2):
-    print(stringy1)
+if stringy[1] == stringy[secondToLast]:
+    print("The second and the second to last characters are the same")
 
 else:
-    print(stringy2)
+    print("The second and the second to last characters are different")
