@@ -1,12 +1,19 @@
-#Please write a program which asks the user for strings using a loop. 
-# The program prints out each string underlined as shown in the examples below. 
-# The execution ends when the user inputs an empty string - that is, just presses Enter at the prompt.
+#Please write a program which asks the user for a string 
+# and then prints it out so that exactly 20 characters are displayed. 
+#If the input is shorter than 20 characters, the beginning of the line is filled in with * characters.
+#You may assume the input string is at most 20 characters long.
 
 
-while True:
-   stringy = input("Please Enter a string: ")
-   print(stringy)
-   underline = len(stringy) * '_'
-   print(underline)
-   if stringy == "":
-      break
+stringy = input("Please enter a string: ")
+char = "*"
+lengthOfString = len(stringy)
+n = 0
+difference = 20 - lengthOfString
+n = 0
+padding = 0
+
+while n < 20 - lengthOfString:
+    n += 1
+    padding = n
+
+print((n * char) + stringy)
