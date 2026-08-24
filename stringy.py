@@ -1,28 +1,10 @@
-#Please write a program which asks the user for a string and
-#then prints out a frame of * characters with the word in the centre. 
-#The width of the frame should be 30 characters. You may assume the input string will always fit inside the frame.
-#If the length of the input string is an odd number, you may print out the word in either of the two possible centre locations.
+#Please write a program which asks the user to type in a string. 
+#The program then prints out all the substrings which begin with the first character, 
+#from the shortest to the longest. Have a look at the example below.
 
-
-stringy = input("please enter a string: ")
-width = (28 - len(stringy)) // 2
-print(30 * "*")
-print("*" +(width * " ") + (stringy) + (" " * width) + "*")
-print(30 * "*")
-#print(" " * difference )
-
-print(width)
-
-#stringy = input("Please enter a string: ")
-#char = "*"
-#lengthOfString = len(stringy)
-#n = 0
-#difference = 20 - lengthOfString
-#n = 0
-#padding = 0
-
-#while n < 20 - lengthOfString:
- #   n += 1
-  #  padding = n
-
-#rint((n * char) + stringy)
+stringy = input("Enter a string: ")
+length = len(stringy)
+n = 0
+while n < length:
+    print(stringy[0:n + 1])
+    n += 1
