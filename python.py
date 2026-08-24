@@ -6,11 +6,13 @@
 limit = int(input("Please enter a limit: "))
 var = 0
 sum = 0
-
+numChar = ""
 
 while True:
         var += 1
+        numChar += str(var) + ' + '
         sum += var
         print(sum)
+        print(numChar)
         if sum >= limit:
                 break 
