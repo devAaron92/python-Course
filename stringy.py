@@ -1,19 +1,18 @@
-#Please write a program which asks the user to input a string. 
-# The program then prints out different messages if the string contains any of the vowels a, e or o.
-#You may assume the input will be in lowercase entirely. Have a look at the examples below.
+#Please write a program which asks the user to type in a string and a single character. 
+#The program then prints the first three character slice which begins with the character specified by the user. 
+#You may assume the input string is at least three characters long. The program must print out three characters, or else nothing.
 
-substring = input("Please enter a string: ")
+#Pay special attention to when there are less than two characters left in the string after the first occurrence of the character looked for. 
+#In that case nothing should be printed out, and there should not be any indexing errors when executing the program.
 
-while True:
-    if 'a' in substring:
-        print("found a") 
-        if 'e' in substring:
-            print("found e")    
-        if 'i' in substring:
-            print("found i") 
+stringy = input("Please enter a string: ")
+char = input("Please Enter a char")
+index = stringy.find(char)
+if index == -1:
+    print("string not found")
 
-        if 'o' in substring:
-            print("found o") 
-        if 'u' in substring:
-            print("found u")    
- 
+elif len(stringy[index: index - 1]) < 2:
+    print(" ")
+else: 
+    print(stringy[index: index + 3])
+
