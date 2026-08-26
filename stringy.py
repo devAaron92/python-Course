@@ -1,11 +1,19 @@
-#Please write a program which asks the user to type in a string. 
-#The program then prints out all the substrings which end with the last character, from the shortest to the longest. 
-#Have a look at the example below.
+#Please write a program which asks the user to input a string. 
+# The program then prints out different messages if the string contains any of the vowels a, e or o.
+#You may assume the input will be in lowercase entirely. Have a look at the examples below.
 
-stringy = input("Enter a string: ")
-length = len(stringy)
-n = length 
-while n > 0:
-    print(stringy[n-1:length])
-    n -= 1
-   
+substring = input("Please enter a string: ")
+
+while True:
+    if 'a' in substring:
+        print("found a") 
+        if 'e' in substring:
+            print("found e")    
+        if 'i' in substring:
+            print("found i") 
+
+        if 'o' in substring:
+            print("found o") 
+        if 'u' in substring:
+            print("found u")    
+ 
